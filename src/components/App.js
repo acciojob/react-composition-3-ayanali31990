@@ -7,15 +7,15 @@ const App = () => {
     <div>
       {/* Do not remove the main div */}
 
-      <Tooltip text="Tooltip for heading">
+      <Tooltip text="This is a tooltip">
         <h2>Hover over heading</h2>
       </Tooltip>
 
-      <Tooltip text="Tooltip for paragraph">
+      <Tooltip text="This is a tooltip">
         <p>Hover over paragraph</p>
       </Tooltip>
 
-      <Tooltip text="Tooltip for button">
+      <Tooltip text="This is a tooltip">
         <button>Hover over button</button>
       </Tooltip>
     </div>
