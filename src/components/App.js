@@ -1,23 +1,20 @@
 import React from "react";
-import Tooltip from "./Tooltip";
 import "./../styles/App.css";
+import Tooltip from "./Tooltip";
 
 const App = () => {
   return (
     <div>
-      {/* Do not remove the main div */}
-
-      <Tooltip text="This is a tooltip">
-        <h2>Hover over heading</h2>
-      </Tooltip>
-
-      <Tooltip text="This is a tooltip">
-        <p>Hover over paragraph</p>
-      </Tooltip>
-
-      <Tooltip text="This is a tooltip">
-        <button>Hover over button</button>
-      </Tooltip>
+      <h2 className="tooltip">
+        <Tooltip text="This is a tooltip">
+          <div>Hover Over Me</div>
+        </Tooltip>
+      </h2>
+      <p className="tooltip">
+        <Tooltip text="This is another tooltip">
+          <div>Hover over me to see another tooltip</div>
+        </Tooltip>
+      </p>
     </div>
   );
 };

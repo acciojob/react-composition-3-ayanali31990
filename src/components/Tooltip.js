@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 
-const Tooltip = ({ text, children }) => {
-  const [show, setShow] = useState(false);
+const Tooltip = ({ children, text }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  return React.cloneElement(children, {
+  const childWithTooltip = React.cloneElement(children, {
     className: "tooltip",
-    onMouseEnter: () => setShow(true),
-    onMouseLeave: () => setShow(false),
+    onMouseEnter: () => setIsVisible((prev) => true),
+    onMouseLeave: () => setIsVisible((prev) => false),
     children: (
       <>
         {children.props.children}
-        {show && <div className="tooltiptext">{text}</div>}
+        {isVisible && <div className="tooltiptext">{text}</div>}
       </>
     ),
   });
+
+  return childWithTooltip;
 };
 
 export default Tooltip;

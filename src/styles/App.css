@@ -1,19 +1,8 @@
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  margin: 20px;
+.tooltip-container {
+    background-color: red;
+    padding: 5px 10px;
+    max-width: 100px;
+    border-radius: 15px;
 }
 
-.tooltiptext {
-  background-color: black;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
+.hover-text {}
